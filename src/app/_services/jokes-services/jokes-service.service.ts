@@ -18,10 +18,12 @@ export class JokesServiceService {
       map((result: any) => new JokesModel(
         result.category,
         result.type,
-        result.joke,
         result.flags,
         result.id,
-        result.error
+        result.error,
+        result.joke,
+        result.setup,
+        result.delivery
       ))
     )
   }

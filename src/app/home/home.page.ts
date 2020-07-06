@@ -11,10 +11,12 @@ import { JokesServiceService } from '../_services/jokes-services/jokes-service.s
 })
 export class HomePage implements OnInit {
 
-  allJokesContainer: JokesModel;
-  joke: string;
-
+  private allJokesContainer: JokesModel;
   private adMob: AdMobAdsPlugin;
+  
+  joke: string;
+  setup: string;
+  delivery: string;
 
   constructor(private jokesService: JokesServiceService) {}
 
@@ -25,13 +27,15 @@ export class HomePage implements OnInit {
 
   async displayBannerAd() {
     this.adMob = Plugins.AdMobAds as AdMobAdsPlugin;
-    await this.adMob.createBannerView({ bannerAdId: 'ca-app-pub-3940256099942544/6300978111' });
+    await this.adMob.createBannerView({ bannerAdId: 'ca-app-pub-5682907146760322/8412616645' });
   }
   
   getAllJokesdata() {
     this.jokesService.getAllJokes().subscribe((allJokes: JokesModel) => {
       this.allJokesContainer = allJokes;
       this.joke = this.allJokesContainer.joke;
+      this.setup = this.allJokesContainer.setup;
+      this.delivery = this.allJokesContainer.delivery;
       console.log(this.allJokesContainer);
     })
   }

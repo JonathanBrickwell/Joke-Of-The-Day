@@ -2,7 +2,15 @@
   <ion-grid style="height: 100%">
     <ion-row justify-content-center align-items-center style="height: 100%">
       <ion-col class="ion-align-self-center ion-text-center">
-        <h1>{{joke}}</h1>
+        <h3>Joke of the day: </h3>
+        <div *ngIf="type === single">
+          <h1>{{ joke }}</h1>
+        </div>
+        <div *ngIf="type === twopart">
+          <h1>{{ setup }}</h1>
+          <h1>{{ delivery }}</h1>
+        </div>
+        <ion-button (click)="getAllJokesdata()" color="light" fill="outline">Another</ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>

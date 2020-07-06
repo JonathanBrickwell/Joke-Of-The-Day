@@ -2,10 +2,12 @@ export class JokesModel {
     constructor(
         public category: string,
         public type: string,
-        public joke: string,
         public flags: Flags,
         public id: number,
-        public error: boolean
+        public error: boolean,
+        public joke: string,
+        public setup: string,
+        public delivery: string
     ){}
 }
 
