@@ -18,7 +18,9 @@ export class HomePage implements OnInit {
   setup: string;
   delivery: string;
 
-  constructor(private jokesService: JokesServiceService) {}
+  constructor(private jokesService: JokesServiceService) {
+    this.displayBannerAd();
+  }
 
   async ngOnInit() {
     this.getAllJokesdata();
