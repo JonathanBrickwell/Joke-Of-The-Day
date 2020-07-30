@@ -9,23 +9,18 @@ import { HttpClient } from '@angular/common/http';
 })
 export class JokesServiceService {
 
-  private url = "https://sv443.net/jokeapi/v2/joke/Any";
+  private url = 'assets/json/jokes.json';
 
   constructor(private httpClient: HttpClient) { }
 
-  getAllJokes(): Observable<JokesModel> {
-    return this.httpClient.get(this.url).pipe(
-      map((result: any) => new JokesModel(
-        result.category,
-        result.type,
-        result.flags,
-        result.id,
-        result.error,
-        result.joke,
-        result.setup,
-        result.delivery
-      ))
-    )
-  }
+  // getAllJokes(): Observable<JokesModel> {
+  //   return this.httpClient.get(this.url).pipe(
+  //     map((result: any) => new JokesModel(
+  //       result.id,
+  //       result.category,
+  //       result.joke,
+  //     ))
+  //   )
+  // }
 
 }

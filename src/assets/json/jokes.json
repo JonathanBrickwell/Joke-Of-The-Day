@@ -1,0 +1,37 @@
+ [
+     {
+        "id": 0,
+        "category": "dark",
+        "joke": "What's red and bad for your teeth? A brick."
+     },
+     {
+        "id": 1,
+        "category": "dark",
+        "joke": "I was going to tell a dead baby joke. But I decided to abort."
+     },
+     {
+        "id": 2,
+        "category": "dark",
+        "joke": "Give a man a match, and he'll be warm for a few hours. Set a man on fire, and he will be warm for the rest of his life."
+     },
+     {
+         "id": 3,
+         "category": "dark",
+         "joke":"My grandfather says I'm too reliant on technology. I called him a hypocrite and unplugged his life support."
+     },
+     {
+         "id": 4,
+         "category":"dark",
+         "joke": "One man's trash is another man's treasure. Wonderful saying, horrible way to find out you were adopted."
+     },
+     {
+         "id": 5,
+         "category": "dark",
+         "joke":  "The other day, my wife asked me to pass her lipstick but I accidentally passed her a glue stick. She still isn't talking to me."
+     },
+     {
+         "id": 6,
+         "category":"dark",
+         "joke":"My girlfriend's dog died, so I tried to cheer her up by getting her an identical one. It just made her more upset. She screamed at me, 'What am I supposed to do with two dead dogs?'"
+     }
+ ]

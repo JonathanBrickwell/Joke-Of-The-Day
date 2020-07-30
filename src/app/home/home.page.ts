@@ -3,6 +3,7 @@ import { Plugins } from '@capacitor/core';
 import { AdMobAdsPlugin } from 'admob-capacitor'
 import { JokesModel } from '../_models/jokes/jokes-model.model';
 import { JokesServiceService } from '../_services/jokes-services/jokes-service.service';
+import data from '../../assets/json/jokes.json';
 
 @Component({
   selector: 'app-home',
@@ -29,17 +30,13 @@ export class HomePage implements OnInit {
 
   async displayBannerAd() {
     this.adMob = Plugins.AdMobAds as AdMobAdsPlugin;
-    await this.adMob.createBannerView({ bannerAdId: 'ca-app-pub-5682907146760322/8412616645' });
+    await this.adMob.createBannerView({ bannerAdId: 'ca-app-pub-3159907247111386/7788760109' });
   }
   
   getAllJokesdata() {
-    this.jokesService.getAllJokes().subscribe((allJokes: JokesModel) => {
-      this.allJokesContainer = allJokes;
-      this.joke = this.allJokesContainer.joke;
-      this.setup = this.allJokesContainer.setup;
-      this.delivery = this.allJokesContainer.delivery;
-      console.log(this.allJokesContainer);
-    })
-  }
+      let random = Math.floor(Math.random() * data.length);
+      console.log(random, data[random]);
+    }
+  
 
 }
